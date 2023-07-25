@@ -11,7 +11,7 @@ namespace BankApplication.Methods
 {
     public class AccountMethod : Account
     {
-        public Account CreateANewAccount(string firstName)
+        public Account EnterAccountName(string firstName, string lastName, string email, string phoneNumber)
         {
             Console.WriteLine("Enter your FirstName and LastName: ");
             string[] nameOfNewAccount = Console.ReadLine().Trim().Split(' ');

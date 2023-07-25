@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace BankApplication.Models
 {
@@ -16,6 +10,7 @@ namespace BankApplication.Models
         public string EmailAddress { get; set; }
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
-        public List<Account> UserAccounts { get; set; }
+        public List<Account> Accounts { get; set; }
+
     }
 }
