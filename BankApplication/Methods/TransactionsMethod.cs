@@ -13,12 +13,12 @@ namespace BankApplication.Methods
     {
         private readonly Account _account;
         private readonly User _user;
-       // private readonly Transactions _transactions;
+        private readonly Transactions _transactions;
         public TransactionsMethod(User user, Account account, Transactions transactions)
         {
             _account = account;
             _user = user;
-            //_transactions = transactions;
+            _transactions = transactions;
         }
 
         public static void RegisterUser(List<User> Users, List<Account> Accounts)
