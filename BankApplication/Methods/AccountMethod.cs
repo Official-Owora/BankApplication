@@ -1,17 +1,17 @@
 ﻿using BankApplication.Models;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace BankApplication.Methods
 {
     public class AccountMethod : Account
     {
-        public Account EnterAccountName(string firstName, string lastName, string email, string phoneNumber)
+        public List<Account> Accounts;
+        public AccountMethod(List<Account> accounts)
+        {
+            Accounts = accounts;
+        }
+        public static Account EnterAccountName(string firstName, string lastName, string email, string phoneNumber)
         {
             Console.WriteLine("Enter your FirstName and LastName: ");
             string[] nameOfNewAccount = Console.ReadLine().Trim().Split(' ');

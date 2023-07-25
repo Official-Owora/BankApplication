@@ -1,11 +1,4 @@
 ﻿using BankApplication.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace BankApplication.Methods
 {
@@ -98,6 +91,19 @@ namespace BankApplication.Methods
             }
             Console.WriteLine("Enter account type. 'Savings' or 'Current': ");
             AccountType = (Console.ReadLine());
+
+            Console.WriteLine("Please generate your Account Number, by entering any 10 digit number");
+            long AccountNumber = new Random().Next(1124561918, 1993485186);
+            string accountType = "";
+            do
+            {
+                Console.WriteLine("Enter account type. Format: S or C / Savings or Current");
+                char value = Console.ReadLine().Trim().ToLower().ToCharArray()[0];
+                if (value == 's' || value == 'c')
+                    AccountType = value == 's' ? "savings" : "current";
+            }
+            while (string.IsNullOrWhiteSpace(AccountType));
+            //return AccountType;
 
             Console.WriteLine("Enter your Password: ");
             Password = Console.ReadLine();
